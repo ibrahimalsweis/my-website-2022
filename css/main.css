@@ -26,6 +26,7 @@
 body {
   font-family: "Cairo", sans-serif;
   direction: rtl;
+  background-color: #f7f7f7;
 }
 a {
   color: black;
@@ -81,10 +82,7 @@ a:hover {
 /* End header */
 
 /* Start box-comments-&share */
-.box-comments {
-  background-color: #f7f7f7;
 
-}
 
 .box-comments .container {
   height: calc(100vh - 88px);
@@ -159,7 +157,6 @@ a:hover {
 
 /* Start main */
 main {
-  background-color: #f9f9f9;
   padding-top:100px;
 }
 .main .container > .row > div {
