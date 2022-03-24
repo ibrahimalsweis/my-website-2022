@@ -26,7 +26,7 @@
 
 <body>
   <!-- Start Header -->
-  <div class="header">
+  <div class="header position-fixed w-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -34,7 +34,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto my-2 mb-lg-0">
             <li class="nav-item">
               <a href="#" class="nav-item mx-2 border rounded-circle d-flex justify-content-center align-items-center"
                 style="width: 40px; height: 40px">
@@ -69,143 +69,250 @@
   </div>
   <!-- End Header -->
   <!-- Start box-comments-share   -->
-  <div class="box-comments-share  position-absolute w-100 overflow-hidden  z-index-100">
+  <div class="box-comments  position-absolute w-100 overflow-hidden  z-index-100">
     <div class="container ">
-      <div class="row box-comments m-auto border w-50 overflow-scroll">
-
-        <div class="col-12">
-          <div class="row">
-            <div class="col-12    fs-3 mt-3"><span class="w-25 px-2 close"><i class="fa-solid fa-xmark"></i></span>
+      <div class="modal fade" id="box-comments" tabindex="-1" aria-labelledby="scroll-title" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="scroll-title">ألتعليقات</h5>
             </div>
-            <div class="col-12">
-              <div class="row">
-                <div class="col-12 comments py-2">
-                  <div class="row">
-                    <div class="col-12">
-                      <h4 class="rounded py-2">ألتعليقات</h4>
-                    </div>
-                    <div class="col-12">
-                      <form>
-                        <div class="mb-3">
-                          <label for="form-comment" class="form-label">كتابة تعليق جديد</label>
-                          <input type="text" class="form-control" id="form-comment" aria-describedby="emailHelp"
-                            placeholder="تعليق جديد ">
-
-                        </div>
-
-                        <button type="submit" class="btn text-white" id="main-btn">نشر</button>
-                      </form>
-                    </div>
+            <div class="modal-body">
+          <!-- main comments  -->
+          <ul class="list-group">
+            <!-- Start comment -->
+            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+              <div>
+                <div class="d-flex flex-wrap">
+                  <div class="dropdown position-absolute">
+                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                    </ul>
                   </div>
-                  <!-- main comments  -->
-                  <ul class="list-group">
-                    <!-- Start comment -->
-                    <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                      <div>
-                        <div class="d-flex flex-wrap">
-                          <div class="dropdown position-absolute">
-                            <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                              <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                              <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                            </ul>
-                          </div>
-                          <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                            <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
-                            <small class="mx-2">miro </small>
-                          </a>
-                          <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                            القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                        </div>
-                        <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                          <label class="active">
-                            <i class="fa-solid fa-thumbs-up"></i>
-                            <span>أعجاب</span>
-                          </label>
-                          <label>
-                            <i class="fa-solid fa-share-from-square"></i>
-                            <span> مشاركة</span>
-                          </label>
-                        </div>
-                      </div>
+                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" style="width: 30px;"/>
+                    <small class="mx-2">miro </small>
+                  </a>
+                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                </div>
 
-                    </li>
-                    <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                      <div>
-                        <div class="d-flex flex-wrap">
-                          <div class="dropdown position-absolute">
-                            <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                              <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                              <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                            </ul>
-                          </div>
-                          <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                            <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
-                            <small class="mx-2">miro </small>
-                          </a>
-                          <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                            القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                        </div>
-                        <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                          <label class="active">
-                            <i class="fa-solid fa-thumbs-up"></i>
-                            <span>أعجاب</span>
-                          </label>
-                          <label>
-                            <i class="fa-solid fa-share-from-square"></i>
-                            <span> مشاركة</span>
-                          </label>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                      <div>
-                        <div class="d-flex flex-wrap">
-                          <div class="dropdown position-absolute">
-                            <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                              <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                              <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                            </ul>
-                          </div>
-                          <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                            <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
-                            <small class="mx-2">miro </small>
-                          </a>
-                          <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                            القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                        </div>
-                        <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                          <label class="active">
-                            <i class="fa-solid fa-thumbs-up"></i>
-                            <span>أعجاب</span>
-                          </label>
-                          <label>
-                            <i class="fa-solid fa-share-from-square"></i>
-                            <span> مشاركة</span>
-                          </label>
-                        </div>
-                      </div>
-                    </li>
-                    <!-- End comment -->
-                  </ul>
-                  <!-- End commentssss  -->
+
+                <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                  <label class="active">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <span>أعجاب</span>
+                  </label>
+                  <label>
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <span> مشاركة</span>
+                  </label>
                 </div>
               </div>
+
+            </li>
+            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+              <div>
+                <div class="d-flex flex-wrap">
+                  <div class="dropdown position-absolute">
+                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <small class="mx-2">miro </small>
+                  </a>
+                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                </div>
+                <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                  <label class="active">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <span>أعجاب</span>
+                  </label>
+                  <label >
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <span> مشاركة</span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+              <div>
+                <div class="d-flex flex-wrap">
+                  <div class="dropdown position-absolute">
+                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <small class="mx-2">miro </small>
+                  </a>
+                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                </div>
+                <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                  <label class="active">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <span>أعجاب</span>
+                  </label>
+                  <label>
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <span> مشاركة</span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+              <div>
+                <div class="d-flex flex-wrap">
+                  <div class="dropdown position-absolute">
+                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <small class="mx-2">miro </small>
+                  </a>
+                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                </div>
+                <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                  <label class="active">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <span>أعجاب</span>
+                  </label>
+                  <label>
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <span> مشاركة</span>
+                  </label>
+                </div>
+              </div>
+
+            </li>
+            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+              <div>
+                <div class="d-flex flex-wrap">
+                  <div class="dropdown position-absolute">
+                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <small class="mx-2">miro </small>
+                  </a>
+                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                </div>
+                <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                  <label class="active">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <span>أعجاب</span>
+                  </label>
+                  <label>
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <span> مشاركة</span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+              <div>
+                <div class="d-flex flex-wrap">
+                  <div class="dropdown position-absolute">
+                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <small class="mx-2">miro </small>
+                  </a>
+                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                </div>
+                <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                  <label class="active">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <span>أعجاب</span>
+                  </label>
+                  <label>
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <span> مشاركة</span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <!-- End comment -->
+          </ul>
+          <!-- End comments  -->
             </div>
+            <div class="modal-footer">
+              <form class="w-100">
+                <div class="row">
+                  <input type="text" class="form-control" id="form-comment" aria-describedby="emailHelp"
+                    placeholder="كتابة تعليق جديد">
+
+                    <button type="submit" class="btn text-white" id="main-btn">نشر</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div class="modal fade" id="share" tabindex="-1" aria-labelledby="share-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="share-title">مشاركة المنشور على ....</h5>
+              <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <span class="rounded-circle  copy-link"><i class="fa-solid fa-copy"></i></span>
+            </div>
+
           </div>
         </div>
       </div>
@@ -237,9 +344,8 @@
                     Dropdown button
                   </i>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
                     <li><a class="dropdown-item" href="#">حظر</a></li>
-                    <li><a class="dropdown-item" href="#">نسخ الرابط</a></li>
                     <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
                     <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
                   </ul>
@@ -251,47 +357,7 @@
                   الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين
                   يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في
                   منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم
-                  باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر
-                  اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن
-                  العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬
-                  وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ
-                  الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في
-                  منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد
-                  العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا
-                  وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست
-                  الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل
-                  عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة
-                  العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية
-                  في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها
-                  حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم
-                  المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي
-                  لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية
-                  المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ،
-                  بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد
-                  من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من
-                  شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم
-                  المتحدة . اللغة العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد العالم، وتعتبر
-                  هي اللغة الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ
-                  الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة
-                  في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم
-                  باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر
-                  اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن
-                  العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬
-                  وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ
-                  الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في
-                  منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد
-                  العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا
-                  وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست
-                  الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل
-                  عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة
-                  العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية
-                  في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها
-                  حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم
-                  المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي
-                  لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية
-                  المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ،
-                  بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد
-                  من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من
+                  باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغ
                   شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم
                   المتحدة .
                 </p>
@@ -301,25 +367,427 @@
                   <i class="fa-solid fa-thumbs-up"></i>
                   <small>أعجاب</small>
                 </li>
-                <li class="list-group-item comment-icon">
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
                   <i class="fa-solid fa-comments"></i>
-                  <small>تعليق</small>
+                  <small>ألتعليقات </small>
                 </li>
 
 
 
-                <div class="dropdown">
-                  <button class="btn-share" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
                       <i class="fa-solid fa-share-from-square"></i>
                       <small>مشاركة</small>
                     
                   </button>
-                  <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-link"></i>  نسخ الرابط </a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-brands fa-facebook"></i> فيسبوك<a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-brands fa-facebook-messenger"></i> مسنجر</a></li>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
                   </ul>
                 </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">ألسلام غليكم </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>ألتعليقات </small>
+                </li>
+
+
+
+                  <button class="btn-share" type="button" data-bs-toggle="modal" data-bs-target="#share">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+
 
 
               </ul>
@@ -330,83 +798,24 @@
         <!-- Start popular-posts  -->
         <div class="col-md-4 popular-posts  py-2">
           <h5> المنشورات الرائجة</h5>
-          <div class="list-group">
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+          <ul class="list-group">
+            <li class="list-group-item  d-flex overflow-hidden mt-2" >
+              <span class="px-2" ><i class="fa-solid fa-share-from-square" data-bs-toggle="modal" data-bs-target="#share"></i></span>
               <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
                   العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
             </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+            <li class="list-group-item  d-flex overflow-hidden mt-2" >
+              <span class="px-2" ><i class="fa-solid fa-share-from-square" data-bs-toggle="modal" data-bs-target="#share"></i></span>
               <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
                   العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
             </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+            <li class="list-group-item  d-flex overflow-hidden mt-2" >
+              <span class="px-2" ><i class="fa-solid fa-share-from-square" data-bs-toggle="modal" data-bs-target="#share"></i></span>
               <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
                   العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
             </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex">
-              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-          </div>
+
+          </ul>
         </div>
         <!-- End popular-posts  -->
       </div>
