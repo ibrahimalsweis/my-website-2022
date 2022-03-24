@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> أبراهيم الصويص | الصفحة الرئيسية</title>
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+  <!-- ========= Google font   =========  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;700;800&display=swap" rel="stylesheet">
+  <!-- ========= normalize  =========  -->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <!-- ========= Bootstrap  =========  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css.map" />
+  <!-- ========= Font Asowome  =========  -->
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <!-- ========= Css  =========  -->
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <!-- Start Header -->
+  <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#" class="nav-item mx-2 border rounded-circle d-flex justify-content-center align-items-center"
+                style="width: 40px; height: 40px">
+                <img src="./img/img-1.png" class="img-fluid rounded-circle w-100 h-100" alt="" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="new-post.html">أضافة منشور جديد </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">أخر المنشورات </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">مساعدة </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">أعدادات</a></li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">تسجيل الدخول</a>
+            </li>
+
+          </ul>
+          <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+        </div>
+        <a class="navbar-brand logo" href="#">أبراهيم الصويص</a>
+
+      </div>
+    </nav>
+  </div>
+  <!-- End Header -->
+  <!-- Start box-comments-share   -->
+  <div class="box-comments-share  position-absolute w-100 overflow-hidden  z-index-100">
+    <div class="container ">
+      <div class="row box-comments m-auto border w-50 overflow-scroll">
+
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12    fs-3 mt-3"><span class="w-25 px-2 close"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12 comments py-2">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4 class="rounded py-2">ألتعليقات</h4>
+                    </div>
+                    <div class="col-12">
+                      <form>
+                        <div class="mb-3">
+                          <label for="form-comment" class="form-label">كتابة تعليق جديد</label>
+                          <input type="text" class="form-control" id="form-comment" aria-describedby="emailHelp"
+                            placeholder="تعليق جديد ">
+
+                        </div>
+
+                        <button type="submit" class="btn text-white" id="main-btn">نشر</button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- main comments  -->
+                  <ul class="list-group">
+                    <!-- Start comment -->
+                    <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+                      <div>
+                        <div class="d-flex flex-wrap">
+                          <div class="dropdown position-absolute">
+                            <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                              <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                              <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                            </ul>
+                          </div>
+                          <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                            <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                            <small class="mx-2">miro </small>
+                          </a>
+                          <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                            القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                        </div>
+                        <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                          <label class="active">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>أعجاب</span>
+                          </label>
+                          <label>
+                            <i class="fa-solid fa-share-from-square"></i>
+                            <span> مشاركة</span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </li>
+                    <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+                      <div>
+                        <div class="d-flex flex-wrap">
+                          <div class="dropdown position-absolute">
+                            <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                              <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                              <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                            </ul>
+                          </div>
+                          <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                            <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                            <small class="mx-2">miro </small>
+                          </a>
+                          <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                            القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                        </div>
+                        <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                          <label class="active">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>أعجاب</span>
+                          </label>
+                          <label>
+                            <i class="fa-solid fa-share-from-square"></i>
+                            <span> مشاركة</span>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
+                      <div>
+                        <div class="d-flex flex-wrap">
+                          <div class="dropdown position-absolute">
+                            <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
+                              <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                              <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
+                            </ul>
+                          </div>
+                          <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                            <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                            <small class="mx-2">miro </small>
+                          </a>
+                          <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
+                            القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
+                        </div>
+                        <div class="like-reply d-flex w-100 justify-content-around mt-3">
+                          <label class="active">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>أعجاب</span>
+                          </label>
+                          <label>
+                            <i class="fa-solid fa-share-from-square"></i>
+                            <span> مشاركة</span>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- End comment -->
+                  </ul>
+                  <!-- End commentssss  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End box-comments-share   -->
+
+  <!-- Start main -->
+  <main class="main overflow-hidden">
+    <div class="container">
+      <div class="row pt-3">
+        <div class="col-md-8 posts py-2">
+          <ul class="list-group">
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img src="./img/avatar-05.png" class="img-fluid rounded-circle" alt="" />
+                    <div class="mx-2">
+                      <small> اسماعيل الصويص </small><br />
+                    </div>
+                  </a>
+                  <small class="position-absolute data-time">منذ 3 د</small>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-ellipsis fs-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                  </i>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">مشاركة</a></li>
+                    <li><a class="dropdown-item" href="#">حظر</a></li>
+                    <li><a class="dropdown-item" href="#">نسخ الرابط</a></li>
+                    <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                    <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-post my-2">
+                <p class="my-3 lh-lg">
+                  اللغة العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة
+                  الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين
+                  يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في
+                  منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم
+                  باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر
+                  اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن
+                  العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬
+                  وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ
+                  الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في
+                  منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد
+                  العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا
+                  وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست
+                  الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل
+                  عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة
+                  العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية
+                  في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها
+                  حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم
+                  المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي
+                  لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية
+                  المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ،
+                  بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد
+                  من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من
+                  شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم
+                  المتحدة . اللغة العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد العالم، وتعتبر
+                  هي اللغة الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ
+                  الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة
+                  في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم
+                  باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر
+                  اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن
+                  العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬
+                  وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ
+                  الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في
+                  منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد
+                  العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا
+                  وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست
+                  الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل
+                  عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة
+                  العربية هي أحد اكثر اللغات السامية المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية
+                  في جميع بلدان الوطن العربي ، بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها
+                  حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم
+                  المتحدة، وفي تاريخ الثامن عشر من شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي
+                  لذكرى اعتمادها في منظمة الأمم المتحدة . اللغة العربية هي أحد اكثر اللغات السامية
+                  المنتشرة في بلاد العالم، وتعتبر هي اللغة الرسمية في جميع بلدان الوطن العربي ،
+                  بالإضافة إلى أريتريا وتشاد ، ويبلغ الذين يتحدثونها حوالي ٤٢٢ مليون نسمة٬ وتعتبر أحد
+                  من اللغات الست الرسميّة المُعتمدة في منظّمة الأمم المتحدة، وفي تاريخ الثامن عشر من
+                  شهر ديسمبر من كل عام يحتفل العالم باليوم العالمي لذكرى اعتمادها في منظمة الأمم
+                  المتحدة .
+                </p>
+              </div>
+              <ul class="icons list-group flex-row justify-content-around position-relative">
+                <li class="list-group-item like-post active">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <small>أعجاب</small>
+                </li>
+                <li class="list-group-item comment-icon">
+                  <i class="fa-solid fa-comments"></i>
+                  <small>تعليق</small>
+                </li>
+
+
+
+                <div class="dropdown">
+                  <button class="btn-share" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-share-from-square"></i>
+                      <small>مشاركة</small>
+                    
+                  </button>
+                  <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-link"></i>  نسخ الرابط </a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-brands fa-facebook"></i> فيسبوك<a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-brands fa-facebook-messenger"></i> مسنجر</a></li>
+                  </ul>
+                </div>
+
+
+              </ul>
+            </li>
+            <!-- End post -->
+          </ul>
+        </div>
+        <!-- Start popular-posts  -->
+        <div class="col-md-4 popular-posts  py-2">
+          <h5> المنشورات الرائجة</h5>
+          <div class="list-group">
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+            <li class="list-group-item  d-flex">
+              <span class="px-2"><i class="fa-solid fa-share-from-square"></i></span>
+              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
+                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+            </li>
+          </div>
+        </div>
+        <!-- End popular-posts  -->
+      </div>
+    </div>
+  </main>
+  <!-- End main -->
+  <!-- ========= Bootstrap  =========  -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="./js/bootstrap.bundle.min.js.map"></script> -->
+  <!-- ========= Font Asowome  =========  -->
+  <script src="./js/all.min.js"></script>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
